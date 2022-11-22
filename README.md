@@ -2,6 +2,10 @@
 
 ## Tehtävät
 
+#### Viikko 3
+
+[changelog.md] (https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
 #### Viikko 2
 
 [vaatimusmaarittely.md](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)

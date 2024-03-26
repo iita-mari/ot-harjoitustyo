@@ -1,10 +1,16 @@
 # Ohjelmistotekniikka, harjoitustyö
-## Tehtävät
-### Viikko 1
-[gitlog.txt](https://github.com/iita-mari/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
-[komentorivi.txt](https://github.com/iita-mari/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Sovellus, jolla käyttäjä voi pitää kirjaa lukemistaan kirjoista
 
-jokin muutos
+Sovelluksen avulla käyttäjä voi pitää kirjaa lukemistaan kirjoista ja antaa niille arvostelun.
 
-Tehtävä 17 muutos
+## Dokumentaatio
+
+[Vaatimuusmäärittely](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Tuntikirjanpito](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+
+
+## Harjoitukset
+[laskarit](XXX)

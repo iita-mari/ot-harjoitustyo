@@ -1,6 +1,6 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-## Sovellus, jolla käyttäjä voi pitää kirjaa lukemistaan kirjoista
+## Luetut kirjat -sovellus
 
 **Sovelluksen** avulla _käyttäjä_ voi pitää kirjaa lukemistaan _kirjoista_ ja antaa niille _arvostelun_.
 

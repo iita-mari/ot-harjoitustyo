@@ -13,4 +13,4 @@ Sovelluksen avulla käyttäjä voi pitää kirjaa lukemistaan kirjoista ja antaa
 
 
 ## Harjoitukset
-[laskarit](XXX)
+[laskarit](https://github.com/iita-mari/ot-harjoitustyo/blob/master/laskarit)

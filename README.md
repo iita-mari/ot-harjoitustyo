@@ -2,7 +2,7 @@
 
 ## Sovellus, jolla käyttäjä voi pitää kirjaa lukemistaan kirjoista
 
-Sovelluksen avulla käyttäjä voi pitää kirjaa lukemistaan kirjoista ja antaa niille arvostelun.
+**Sovelluksen** avulla _käyttäjä_ voi pitää kirjaa lukemistaan _kirjoista_ ja antaa niille _arvostelun_.
 
 ## Dokumentaatio
 

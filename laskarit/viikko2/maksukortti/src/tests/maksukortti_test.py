@@ -14,8 +14,6 @@ class TestMaksukortti(unittest.TestCase):
 
         self.assertEqual(str(self.kortti), "Kortilla on rahaa 7.50 euroa")
 
-    def saldo_euroina(self):
-        return self.saldo / 100
 
     def test_syo_edullisesti_vahentaa_saldoa_oikein_2(self):
         self.kortti.syo_edullisesti()

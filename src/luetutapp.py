@@ -24,12 +24,14 @@ class Ui:
                 self.exit_login()
                 break
 
-    def user_login(self):        
+    def user_login(self):
         user_name = input("Anna käyttäjätunnus: ")
         password = input("Anna salasana: ")
 
         print("Kirjautuminen onnistui!")
         print("")
+        read_books_view()
+
 
     def new_user(self):
         while True:
@@ -40,13 +42,34 @@ class Ui:
             if new_password != new_password_again:
                 print("Salasanat eivät olleet samat!")
                 continue
-            else:
-                print("Käyttäjän luonti onnistui!")
-                print("")
-                break
+            print("Käyttäjän luonti onnistui!")
+            booklist[new_username] = []
+            print("")
+            break
 
     def exit_login(self):
         print("Kiitos ja näkemiin!")
+
+
+    def read_books_view(self, user_name):
+        print("Tervetuloa!")
+        print("Olet lukenut seuraavat kirjat:")
+        list_of_books()
+        
+
+    def list_of_books(self, user_name):
+        return self.booklist.get(user_name)
+
+    def add_book(self, user_name, book_name, rating):
+        if user_name in self.booklist:
+            self.booklist[user_name].append({"book": book_name, "rating": rating})
+            print(f"Kirja '{book_name}' lisätty {user_name}! Arvostelusi kirjalle: {rating}!")
+        else:
+            print("Käyttäjätunnusta ei löydy!")
+
+
+
+
 
 ui = Ui()
 ui.start()

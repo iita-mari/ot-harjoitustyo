@@ -8,6 +8,7 @@ def foo(ctx):
 def start(ctx):
     ctx.run("python3 src/index.py", pty=True)
 
+@task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest", pty=True)
 
@@ -16,18 +17,9 @@ def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
 
 @task
-def start_invoke(ctx)
-    ctx.run("poetry run invoke test")
+def test(ctx):
+    ctx.run("pytest src", pty=True)
 
 @task
-def test_invoke(ctx):
-    ctx.run("poetry run invoke test")
-
-@task
-def coverage_invoke(ctx):
-    ctx.run("poetry run invoke coverage-report")
-
-@task(coverage_invoke)
-def coverage_invoke_report(ctx):
-    ctx.run("coverage html", pty=True)
-
+def lint(ctx):
+    ctx.run("pylint src", pty=True)

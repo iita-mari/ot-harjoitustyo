@@ -19,6 +19,6 @@
 3. Sovelluksen käynnistämiseen käytä komentoa _poetry run invoke start_
 
 ## Muut komennot ##
-_poetry run invoke test_ -> testien suorittaminen
-_ poetry run invoke coverage-report -> testikastavuusraportin koostaminen htmlcov-hakemistoon
-_poetry run invoke lint -> tee .pylintrc:iin määritellyt tarkistukset
+* _poetry run invoke test_ -> testien suorittaminen
+* _poetry run invoke coverage-report_ -> testikastavuusraportin koostaminen htmlcov-hakemistoon
+* _poetry run invoke lint_ -> tee .pylintrc:iin määritellyt tarkistukset

@@ -1,0 +1,101 @@
+iiru@lx2-fuxi107:~/ohte/ot_viikko1/tiedostoja$ git log --stat | cat
+commit e4c01d19973232cdb9455162f6de0e2df050f53b
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 18:49:52 2025 +0200
+
+    poistoja ja muutoksia
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 52b7e32648a9428743b8eb8b0c0af7c13e8cef0c
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:48:57 2025 +0200
+
+    uusi kansio ja uusia tiedostoja
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 04a263bc0721c1126f4560305c5c9a1f9fa2282d
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:41:14 2025 +0200
+
+    lisätty ja poistettu tekstiä
+
+ eka.txt    | 7 ++++---
+ kolmas.txt | 5 ++++-
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+commit cf47f694ede95e735fa33c606d3a634f70723686
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:39:32 2025 +0200
+
+    tiedoston uudelleen nimeäminen
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 78bfaf74d8c72e8c53674c3bb651f15dd66e9a35
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:38:06 2025 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 45026ac7f3ad79d4e4866c9eb69f35a5dd4bdfcc
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:33:44 2025 +0200
+
+    lisätty ja poistettu tekstiä
+
+ tiedosto.txt | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit 04da03d74f67fba227064d6f7bbd9d13e4bddf02
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:28:50 2025 +0200
+
+    lisätty paljon tekstiä
+
+ tiedosto.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit 733c4c7b51f37e28512081cc0d82c6626e8095fc
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:09:55 2025 +0200
+
+    muutoksia ja lisäyksiä
+
+ kolmas.txt      | 1 +
+ stuff/jokin.txt | 0
+ toinen.txt      | 1 +
+ 3 files changed, 2 insertions(+)
+
+commit f1e65a266a353fd60b0ef1ea69c7017f998854bb
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 17:07:40 2025 +0200
+
+    lisää kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a86b6d96b7ea90f2633d88321da8eb1e417ff58c
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 13:37:48 2025 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 7076b521600d47438fce5c7540b1ab54438c71ca
+Author: Iita-Mari <iita-mari.ruponen@helsinki.fi>
+Date:   Mon Mar 17 13:35:38 2025 +0200

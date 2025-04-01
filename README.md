@@ -9,3 +9,12 @@ Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä t
 - [Työaikakirjanpito](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 - [Changelog](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+## Asennus
+1. Asenna riippuvuudet: `poetry install`
+2. Käynnistä sovellut: `poetry run invoke start`
+
+## Kontorivitoiminnot
+- Suorita ohjelma: `poetry invoke start`
+- Suorita testit: `poetry run invoke test`
+- Generoi testikattavuusraportti htmlcov-hakemistoon: `poetry run invoke coverage-report`

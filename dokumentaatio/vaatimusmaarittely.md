@@ -10,12 +10,12 @@ Alussa käyttäjiä on vain yksi käyttäjärooli, joka kuvastaa yhtä _kotitalo
 
 
 ### Aloitus ja kirjautuminen
-- Sovellukseen voi luoda kotitalouden eli käyttäjän. (Eli yhdellä kotitaloudella on yksi käyttäjä/-tunnus).
+- TEHTY: Sovellukseen voi luoda kotitalouden eli käyttäjän. (Eli yhdellä kotitaloudella on yksi käyttäjä/-tunnus).
   - Käyttäjätunnus on uniikki ja vähintään 4 merkkiä pitkä
   - Salasana on vähintään 4 merkkiä pitkä
- - Sovellukseen voi kirjautua
-   - Oikea, rekisteröity käyttäjätunnus yhdessä oikean salasanan kanssa kirjaavat kotitalouden/käyttäjän sisään sovellukseen
-   - Väärästä tunnuksesta tai salasanasta tulee virheviesti
+ - TEHTY: Sovellukseen voi kirjautua
+   - TEHTY: Oikea, rekisteröity käyttäjätunnus yhdessä oikean salasanan kanssa kirjaavat kotitalouden/käyttäjän sisään sovellukseen
+   - TEHTY: Väärästä tunnuksesta tai salasanasta tulee virheviesti
    - Mikäli kotitaloutta/käyttäjää ei ole olemassa, ilmoitetaan tästä virheviestillä
 
 ### Kirjautumisen jälkeen eli sovellusnäkymä
@@ -25,7 +25,7 @@ Alussa käyttäjiä on vain yksi käyttäjärooli, joka kuvastaa yhtä _kotitalo
 - Kotitöitä voi lisätä, muokata ja poistaa
 - Kotitalouden jäseniä voi lisätä, muokata ja poistaa
 - Sovellus kertoo, kuka on johdolla tehdyissä kotitöistä eli kenelle kotitalouden jäsenelle on merkattu eniten kotitöitä tehdyiksi
-- Sovelluksesta voi kirjautua ulos
+- TEHTY: Sovelluksesta voi kirjautua ulos
 
 ## Jatkokehitysideat
 - Myöhemmässä vaiheessa eri kotitöille voidaan määrittää erilaiset pistearvot

@@ -13,3 +13,4 @@
 - Kirjautuminen tarkistetaan: käyttäjätietojen tulee olla luotu
 - Kirjautuneena pääsee sovellus-näkymään (app_view)
 - Sovellusnäkymä (app_view) aloitettu
+- Testaus: alustavaa hahmotelmaa UserRepositoryn testaamisesta, ei toimi vielä

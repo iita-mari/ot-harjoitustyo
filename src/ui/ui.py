@@ -1,11 +1,20 @@
+import os
+from repositories.user_repository import UserRepository, User
+from ui.app_view import AppView
+
+dirname = os.path.dirname(__file__)
+user_file_path = os.path.join(dirname, "..", "data", "users.csv")
+user_repository = UserRepository(user_file_path)
+
+
 class UI:
     def __init__(self):
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
         print("* Tervetuloa Kotityö-sovellukseen *")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
-        print("")
-    
+
     def start(self):
+        print("")
         while True:
             print("Valitse toiminto:")
             print("[1] Kirjaudu sisään")
@@ -13,7 +22,7 @@ class UI:
             print("[x] Poistu")
             print("")
 
-            user_choice = input("")
+            user_choice = input("Valinta: ")
 
             if user_choice == "1":
                 self.user_login()
@@ -22,30 +31,54 @@ class UI:
             elif user_choice.lower() == "x":
                 self.exit_login()
                 break
+            else:
+                print("Virheellinen valinta!")
 
     def user_login(self):
-        user_name = input("Anna käyttäjätunnus: ")
+        print("-----------------------")
+        username = input("Anna käyttäjätunnus: ")
         password = input("Anna salasana: ")
-
-        print("Kirjautuminen onnistui!")
         print("")
-        # siirtyminen sovellus-näkymään
 
+        user = user_repository.find_by_username(username)
+
+        if user and user.password == password:
+            print("Kirjautuminen onnistui!")
+            AppView(user).main()
+
+        else:
+            print("Väärä käyttäjätunnus tai salasana.")
+            print("")
+            print("Kokeile uudestaan?")
+            print("[1] Kyllä")
+            print("[2] Ei")
+            user_choice = input("Valinta: ")
+
+            if user_choice == "1":
+                self.user_login()
+            elif user_choice == "2":
+                print("Kiitos ja näkemiin! Palaat aloitusvalikkoon")
+                self.start()
 
     def new_user(self):
+        print("-----------------------")
         while True:
-            new_username = input("Anna käyttäjätunnus: ")
-            new_password = input("Anna salasana: ")
-            new_password_again = input("Anna salasana uudestaan: ")
+            username = input("Anna käyttäjätunnus: ")
+            if user_repository.find_by_username(username):
+                print("Käyttäjätunnus on jo käytössä.")
+                continue
 
-            if new_password != new_password_again:
+            password = input("Anna salasana: ")
+            password2 = input("Anna salasana uudestaan: ")
+
+            if password != password2:
                 print("Salasanat eivät olleet samat!")
                 continue
-            print("Käyttäjän luonti onnistui!")
-            # siirtyminen kirjautuminen-näkymään
-            print("")
+
+            user_repository.create(User(username, password))
+            print("-----------------------")
             break
 
     def exit_login(self):
-        print("Kiitos ja näkemiin!")
-        return "Kiitos ja näkemiin!"
+        print("Valitsit 'poistu'. Kiitos ja näkemiin!")
+        return "Valitsit 'poistu'. Kiitos ja näkemiin!"

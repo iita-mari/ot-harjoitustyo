@@ -3,7 +3,7 @@
 ## Kotityö-sovellus
 Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä tehdyksi. Kotityön tekemisestä saa *pisteen*, ja kuun lopuksi eniten *pisteitä* saanut on **voittaja**. Sovellus perustuu [kotityö-kilpailuun, jonka Gogi Mavromichalis on esitellyt Instagramissa](https://www.instagram.com/p/C9SZ7isNEEx/).
 
-**HUOM!** Käytäthän vähintään Python-versiota 3.10 sovellusta käyttäessä.
+**HUOM!** Käytäthän vähintään Python-versiota 3.10 sovellusta kanssa.
 
 ## Dokumentaatio
 - [Vaatimusmäärittely](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
@@ -18,7 +18,7 @@ Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä t
 1. Asenna riippuvuudet: `poetry install`
 2. Käynnistä sovellus: `poetry run invoke start`
 
-## Kontorivitoiminnot
+## Komentorivitoiminnot
 - Suorita ohjelma: `poetry invoke start`
 - Suorita testit: `poetry run invoke test`
 - Generoi testikattavuusraportti htmlcov-hakemistoon: `poetry run invoke coverage-report`

@@ -4,4 +4,5 @@
 | 25.3. | 1,5 | Alustavan vaatimusmäärittelyn ja työaikakirjanpidon tekeminen |
 | 1.4. | 5 | Käyttöliittymän ja muun toiminnallisuuden hahmottelu, ensimmäinen testi ja invoke-taskien luonti|
 | 8.4. | 10 | Käyttöliittymän eteenpäin vienti. Sovelluksen kirjautumisen jälkeisen näkymän (app_view:n) hahmottelu. Edellisen viikon virheiden korjaaminen. Kirjautumistietojen tallentaminen tiedostoon. User_repositorylle testien kokeileminen|
-| Yht. | 11,5 |
+| 15.4. | 7 | Kotityökisan taulukko, kotitöiden lisääminen/muokkaaminen/poistaminen. Testien kirjoittaminen viikon ohjeistuksen mukaisesti. Kisataulukko ja kotityöt tallennetaan tiedostoon.|
+| Yht. | 23,5 |

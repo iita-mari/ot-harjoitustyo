@@ -5,3 +5,10 @@ htmlcov
 
 # data files
 data/users.csv
+data/contest_grid.csv
+data/testi_contest.csv
+data/testi_houseworks.csv
+data/houseworks.csv
+data/testi_housework.csv
+data/test_users.csv
+

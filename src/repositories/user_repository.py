@@ -20,7 +20,7 @@ class UserRepository:
     def _read(self):
         users = []
 
-        with open(self._file_path, "r") as file:
+        with open(self._file_path, "r", encoding='utf-8') as file:
             for row in file:
                 row = row.strip()
                 if not row:
@@ -30,7 +30,7 @@ class UserRepository:
         return users
 
     def _write(self, users):
-        with open(self._file_path, "w") as file:
+        with open(self._file_path, "w", encoding='utf-8') as file:
             for user in users:
                 file.write(f"{user.username};{user.password}\n")
 

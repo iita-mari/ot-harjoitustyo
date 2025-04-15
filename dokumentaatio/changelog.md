@@ -14,3 +14,11 @@
 - Kirjautuneena pääsee sovellus-näkymään (app_view)
 - Sovellusnäkymä (app_view) aloitettu
 - Testaus: alustavaa hahmotelmaa UserRepositoryn testaamisesta, ei toimi vielä
+
+## Viikko 5
+- App_view näyttää kotityökisan kisataulukon
+- Kisaan voi lisätä kotitöitä
+- Kisataulukkoa voi täyttää
+- Kotitöitä voi luoda, muokata ja poistaa
+- Kisataulukko ja kotityöt tallennetaan .csv-tiedostoon
+- Testaus: UserRepositoryyn ja HouseworkRepositoryyn testejä

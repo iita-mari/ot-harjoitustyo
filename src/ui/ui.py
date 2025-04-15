@@ -81,4 +81,3 @@ class UI:
 
     def exit_login(self):
         print("Valitsit 'poistu'. Kiitos ja näkemiin!")
-        return "Valitsit 'poistu'. Kiitos ja näkemiin!"

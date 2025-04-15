@@ -4,7 +4,7 @@ from pathlib import Path
 
 class ContestRepository:
     def __init__(self):
-        self.data_dir = Path("data")
+        self.data_dir = Path("src/data")
         self.data_dir.mkdir(exist_ok=True)
 
     def _get_user_file(self, username):

@@ -4,9 +4,9 @@ from repositories.user_repository import User, UserRepository
 
 class TestUserRepository(unittest.TestCase):
     def setUp(self):
-        if os.path.exists("data/test_users.csv"):
-            os.remove("data/test_users.csv")
-        self.user_repository = UserRepository("data/test_users.csv")
+        if os.path.exists("src/data/test_users.csv"):
+            os.remove("src/data/test_users.csv")
+        self.user_repository = UserRepository("src/data/test_users.csv")
         self.user_matti = User('matti', 'matti1')
         self.user_maija = User('maija', 'maija1')
 

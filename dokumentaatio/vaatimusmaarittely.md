@@ -19,12 +19,12 @@ Alussa käyttäjiä on vain yksi käyttäjärooli, joka kuvastaa yhtä _kotitalo
    - Mikäli kotitaloutta/käyttäjää ei ole olemassa, ilmoitetaan tästä virheviestillä
 
 ### Kirjautumisen jälkeen eli sovellusnäkymä
-- Kotitalous/käyttäjä näkee listauksen kotitöistä
-  - Näkymä on karkea "excelmäinen kuukausinäkymä" (kts. [alkuperäinen paperiversio, kotityö-kilpailu](https://www.instagram.com/p/C9SZ7isNEEx/))
-  - Kotitöitä voi merkata eri kotitalouden jäsenten tekemiksi
-- Kotitöitä voi lisätä, muokata ja poistaa
+- TESTY: Kotitalous/käyttäjä näkee listauksen kotitöistä
+  - TEHTY: Näkymä on karkea "excelmäinen kuukausinäkymä" (kts. [alkuperäinen paperiversio, kotityö-kilpailu](https://www.instagram.com/p/C9SZ7isNEEx/))
+  - TEHTY: Kotitöitä voi merkata eri kotitalouden jäsenten tekemiksi
+- TEHTY: Kotitöitä voi lisätä, muokata ja poistaa
 - Kotitalouden jäseniä voi lisätä, muokata ja poistaa
-- Sovellus kertoo, kuka on johdolla tehdyissä kotitöistä eli kenelle kotitalouden jäsenelle on merkattu eniten kotitöitä tehdyiksi
+- TEHTY: Sovellus kertoo, kuka on johdolla tehdyissä kotitöistä eli kenelle kotitalouden jäsenelle on merkattu eniten kotitöitä tehdyiksi
 - TEHTY: Sovelluksesta voi kirjautua ulos
 
 ## Jatkokehitysideat

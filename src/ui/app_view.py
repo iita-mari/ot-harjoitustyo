@@ -30,6 +30,7 @@ class AppView:
                 self.housework()
             elif user_choice == "3":
                 print("Valitsit 'Kirjaudu ulos'. Kirjaudutaan ulos.")
+                #tässä bugi, miten pääsen kirjautumaan ulos?
                 break
             else:
                 print("Virheellinen valinta.")

@@ -22,3 +22,9 @@
 - Kotitöitä voi luoda, muokata ja poistaa
 - Kisataulukko ja kotityöt tallennetaan .csv-tiedostoon
 - Testaus: UserRepositoryyn ja HouseworkRepositoryyn testejä
+
+## Viikko 6
+- Erotettu services-luokkia ui:sta
+- Nyt käyttäjätunnuksen tulee olla uniikki ja vähintään 4 merkkiä pitkä
+- Nyt väärästä tunnuksesta (olemassa oleva tai liian lyhyt) tai väärästä salasanasta tulee virheviesti
+- Testaus: Muutama testi lisää repositoryyn ja aloitettu service-luokkiin testien kirjoittaminen

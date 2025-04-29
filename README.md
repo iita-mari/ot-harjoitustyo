@@ -9,6 +9,8 @@ Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä t
 - [Viikko 5:n release](https://github.com/iita-mari/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Dokumentaatio
+- [Käyttöohje](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 - [Vaatimusmäärittely](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 - [Arkkitehtuurikuvaus](https://github.com/iita-mari/ot-harjoitustyo/blob/997a43c548e2ee792bea6e17b5692596838a7344/dokumentaatio/arkkitehtuuri.md) 

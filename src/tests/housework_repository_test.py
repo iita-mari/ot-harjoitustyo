@@ -18,4 +18,3 @@ class TestHouseworkRepository(unittest.TestCase):
         self.housework.add(self.test_username, "imurointi")
         tasks = self.housework.get_all(self.test_username)
         self.assertIn("imurointi", tasks)
-

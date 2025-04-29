@@ -1,13 +1,16 @@
-import csv
 from pathlib import Path
 from repositories.housework_repository import HouseworkRepository
 from repositories.contest_repository import ContestRepository
+from services.housework_service import HouseworkService
+from services.contest_service import ContestService
 
 class AppView:
     def __init__(self, user):
         self.user = user
-        self.housework_repo = HouseworkRepository()
-        self.contest_repo = ContestRepository()
+        self.housework_repository = HouseworkRepository()
+        self.contest_repository = ContestRepository()
+        self.housework_service = HouseworkService()
+        self.contest_service = ContestService()
 
     def main(self):
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*")
@@ -26,7 +29,7 @@ class AppView:
             elif user_choice == "2":
                 self.housework()
             elif user_choice == "3":
-                print("Valitsit 'Kirjaudu ulos'. Palaat aloitusvalikkoon.")
+                print("Valitsit 'Kirjaudu ulos'. Kirjaudutaan ulos.")
                 break
             else:
                 print("Virheellinen valinta.")
@@ -34,13 +37,11 @@ class AppView:
     def contest(self):
         print("Kotityö-kisa")
         print("Täällä voit katsoa Kotityö-kisan tilanteen sekä lisätä pisteitä kisataulukkoon")
-        tasks = self.housework_repo.get_all(self.user.username)
+        tasks, grid = self.contest_service.get_contest_data(self.user.username)
         if not tasks:
             print("Et ole vielä lisännyt kotitöitä.")
             return
-        else:
-            grid = self.contest_repo.load_grid(self.user.username, len(tasks))
-            self._print_contest_grid(grid, tasks)
+        self._print_contest_grid(grid, tasks)
 
         print("\n[1] Lisää piste")
         print("[2] Palaa valikkoon")
@@ -52,22 +53,18 @@ class AppView:
             self.main()
 
     def add_point(self):
-        tasks = self.housework_repo.get_all(self.user.username)
-        grid = self.contest_repo.load_grid(self.user.username, len(tasks))
+        tasks, grid = self.contest_service.get_contest_data(self.user.username)
         self._print_contest_grid(grid, tasks)
-        tasks = self.housework_repo.get_all(self.user.username)
-        row = int(input("Valitse rivin numero (1-[]): ".format(len(tasks)))) - 1
+        row = int(input(f"Valitse rivin numero (1-{len(tasks)}): ")) - 1
         col = int(input("Valitse päivän numero (1-31): ")) - 1
         mark = input("Syötä merkki (esim. oma etukirjain): ")
 
-        grid[row][col] = mark
-        self.contest_repo.save_grid(self.user.username, grid)
+        grid = self.contest_service.add_point(self.user.username, row, col, mark)
         print("Piste lisätty!")
 
 
     def _print_contest_grid(self, grid, tasks):
         task_col_width = max(len(task) for task in tasks) + 2
-
         print(" " * task_col_width + " ".join(f"{i+1:2}" for i in range(31)))
         print(" " * task_col_width + "-" * (3 * 31))
 
@@ -76,11 +73,11 @@ class AppView:
             row_content = " ".join(cell if cell else "." for cell in row)
             print(f"{task_name}{row_content}")
 
-        all_marks = [cell for row in grid for cell in row if cell]
-        if all_marks:
+        mark_counts = self.contest_service.count_marks(grid)
+        if mark_counts:
             print("\nPisteet:")
-            for mark in sorted(set(all_marks)):
-                print(f"{mark}: {all_marks.count(mark)}")
+            for mark, count in sorted(mark_counts.items()):
+                print(f"{mark}: {count}")
 
 
     def housework(self):
@@ -97,19 +94,19 @@ class AppView:
             user_choice = input("Valitse toiminto: ")
 
             if user_choice == "1":
-                tasks = self.housework_repo.get_all(self.user.username)
+                tasks = self.housework_service.list_tasks(self.user.username)
                 for i, task in enumerate(tasks, 1):
                     print(f"{i}. {task}")
             elif user_choice == "2":
                 name = input("Kotityön nimi: ")
-                self.housework_repo.add(self.user.username, name)
+                self.housework_service.add_task(self.user.username, name)
             elif user_choice == "3":
                 old = input("Kotityön vanha nimi: ")
                 new = input("Uusi nimi: ")
-                self.housework_repo.update(self.user.username, old, new)
+                self.housework_service.update_task(self.user.username, old, new)
             elif user_choice == "4":
                 name = input("Poistettavan kotityön nimi: ")
-                self.housework_repo.delete(self.user.username, name)
+                self.housework_service.delete_task(self.user.username, name)
             elif user_choice == "5":
                 self.main()
             else:

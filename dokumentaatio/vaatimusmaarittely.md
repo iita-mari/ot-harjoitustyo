@@ -11,15 +11,15 @@ Alussa käyttäjiä on vain yksi käyttäjärooli, joka kuvastaa yhtä _kotitalo
 
 ### Aloitus ja kirjautuminen
 - TEHTY: Sovellukseen voi luoda kotitalouden eli käyttäjän. (Eli yhdellä kotitaloudella on yksi käyttäjä/-tunnus).
-  - Käyttäjätunnus on uniikki ja vähintään 4 merkkiä pitkä
-  - Salasana on vähintään 4 merkkiä pitkä
+  - TEHTY: Käyttäjätunnus on uniikki ja vähintään 4 merkkiä pitkä
+  - TEHTY: Salasana on vähintään 4 merkkiä pitkä
  - TEHTY: Sovellukseen voi kirjautua
    - TEHTY: Oikea, rekisteröity käyttäjätunnus yhdessä oikean salasanan kanssa kirjaavat kotitalouden/käyttäjän sisään sovellukseen
    - TEHTY: Väärästä tunnuksesta tai salasanasta tulee virheviesti
-   - Mikäli kotitaloutta/käyttäjää ei ole olemassa, ilmoitetaan tästä virheviestillä
+   - TEHTY: Mikäli kotitaloutta/käyttäjää ei ole olemassa, ilmoitetaan tästä virheviestillä
 
 ### Kirjautumisen jälkeen eli sovellusnäkymä
-- TESTY: Kotitalous/käyttäjä näkee listauksen kotitöistä
+- TEHTY: Kotitalous/käyttäjä näkee listauksen kotitöistä
   - TEHTY: Näkymä on karkea "excelmäinen kuukausinäkymä" (kts. [alkuperäinen paperiversio, kotityö-kilpailu](https://www.instagram.com/p/C9SZ7isNEEx/))
   - TEHTY: Kotitöitä voi merkata eri kotitalouden jäsenten tekemiksi
 - TEHTY: Kotitöitä voi lisätä, muokata ja poistaa

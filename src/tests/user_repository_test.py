@@ -30,3 +30,7 @@ class TestUserRepository(unittest.TestCase):
         self.user_repository.create(self.user_matti)
         user = self.user_repository.find_by_username(self.user_matti.username)
         self.assertEqual(user.username, self.user_matti.username)
+
+    def test_find_by_username_when_no_user(self):
+        user = self.user_repository.find_by_username("liisa")
+        self.assertEqual(user, None)

@@ -11,13 +11,17 @@ user_service = UserService(user_repository)
 
 class UI:
     def __init__(self):
-        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
-        print("* Tervetuloa Kotityö-sovellukseen *")
-        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
+        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
+        print("Tervetuloa Kotityö-sovellukseen")
+        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
 
     def start(self):
-        print("")
         while True:
+            print("")
+            print("~*~*~*~*~*~*~*~*~*~")
+            print("Kirjautumisvalikko")
+            print("~*~*~*~*~*~*~*~*~*~")
+            print("")
             print("Valitse toiminto:")
             print("[1] Kirjaudu sisään")
             print("[2] Luo uusi käyttäjä")
@@ -34,10 +38,17 @@ class UI:
                 self.exit_login()
                 break
             else:
-                print("Virheellinen valinta!")
+                print("")
+                print("---------------------------")
+                print("VIRHE! Virheellinen valinta!")
+                print("---------------------------")
 
     def user_login(self):
-        print("-----------------------")
+        print("")
+        print("~*~*~*~*~*~*~*~*~")
+        print("Kirjaudu sisään")
+        print("~*~*~*~*~*~*~*~*~")
+        print("")
         username = input("Anna käyttäjätunnus: ")
         password = input("Anna salasana: ")
         print("")
@@ -45,49 +56,95 @@ class UI:
         user = user_service.authenticate(username, password)
 
         if user:
+            print("-----------------------")
             print("Kirjautuminen onnistui!")
+            print("Siirryt sovellukseen...")
+            print("-----------------------")
+            print("")
             AppView(user).main()
         else:
             existing_user = user_repository.find_by_username(username)
 
             if not existing_user:
-                print("Käyttäjätunnusta ei ole olemassa.")
+                print("----------------------------------------")
+                print("VIRHE! Käyttäjätunnusta ei ole olemassa.")
+                print("Palataan valikkoon...")
+                print("----------------------------------------")
             else:
-                print("Väärä käyttäjätunnus tai salasana.")
-                print("")
-                print("Kokeile uudestaan?")
+                print("-----------------------------------------")
+                print("VIRHE! Väärä käyttäjätunnus tai salasana.")
+                print("Yritä uudestaan?")
+                print("-----------------------------------------")
                 print("[1] Kyllä")
                 print("[2] Ei")
+                print("")
                 user_choice = input("Valinta: ")
 
                 if user_choice == "1":
                     self.user_login()
                 elif user_choice == "2":
-                    print("Kiitos ja näkemiin! Palaat aloitusvalikkoon")
+                    print("---------------------")
+                    print("Palataan valikkoon...")
+                    print("---------------------")
                     self.start()
+                else:
+                    print("---------------------------")
+                    print("VIRHE!Virheellinen valinta!")
+                    print("---------------------------")
+
 
     def new_user(self):
-        print("-----------------------")
+        print("")
+        print("~*~*~*~*~*~*~*~*~*~")
+        print("Luo uusi käyttäjä")
+        print("~*~*~*~*~*~*~*~*~*~")
+        print("")
         while True:
-            username = input("Anna käyttäjätunnus: ")
+            username = input("Anna käyttäjätunnus (vähintään 4 merkkiä): ")
             if len(username) < 4:
-                print("Käyttäjätunnuksen pitää olla vähintään 4 merkkiä.")
+                print("")
+                print("---------------------------------------------------------")
+                print("VIRHE! Käyttäjätunnuksen pitää olla vähintään 4 merkkiä.")
+                print("Palataan valikkoon...")
+                print("---------------------------------------------------------")
+                print("")
                 break
-            password = input("Anna salasana: ")
+            password = input("Anna salasana (vähintään 4 merkkiä): ")
             if len(password) < 4:
-                print("Salasanan tulee olla vähintään 4 merkkiä.")
+                print("")
+                print("---------------------------------------------------")
+                print("VIRHE! Salasanan tulee olla vähintään 4 merkkiä.")
+                print("Palataan valikkoon...")
+                print("---------------------------------------------------")
+                print("")
                 break
             password2 = input("Anna salasana uudestaan: ")
+            print("")
 
             result = user_service.create_user(username, password, password2)
 
-            if result is True:
-                print("Käyttäjätunnus on jo käytössä.")
-            elif result is False:
-                print("Salasanat eivät olleet samat!")
-            else:
+            if result == "username_taken":
+                print("--------------------------------------")
+                print("VIRHE! Käyttäjätunnus on jo käytössä.")
+                print("Kokeile uudestaan:")
+                print("--------------------------------------")
+                print("")
+            elif result == "passwords_dont_match":
+                print("--------------------------------------")
+                print("VIRHE! Salasanat eivät olleet samat!")
+                print("Kokeile uudestaan:")
+                print("--------------------------------------")
+                print("")
+            elif result == "success":
+                print("-------------------------")
                 print("Käyttäjä luotu!")
+                print("Palataan valikkoon...")
+                print("-------------------------")
+                print("")
                 break
 
     def exit_login(self):
-        print("Valitsit 'poistu'. Kiitos ja näkemiin!")
+        print("")
+        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
+        print("Sovellus suljetaan. Kiitos ja näkemiin!")
+        print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")

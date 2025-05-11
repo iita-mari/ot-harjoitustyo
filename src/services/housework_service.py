@@ -1,7 +1,5 @@
 from repositories.housework_repository import HouseworkRepository
 
-# Jotain sotkua tullut, kun services erotettu muusta koodista, tarkista
-
 class HouseworkService:
     """Service class for housework-related things.
     """

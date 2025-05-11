@@ -31,15 +31,16 @@ class UserService:
             username (_type_): name of the user
             password: password first time
             password2: password second time
-
+    
         Returns:
-            True: If username is taken or username is unique and password matches password2
-            False: If passwords are not the same
+            "username_taken": if username already exists
+            "passwords_dont_match": if passwords don't match
+            "success": if user is created
         """
 
         if self._user_repository.find_by_username(username):
-            return True
+            return "username_taken"
         if password != password2:
-            return False
+            return "passwords_dont_match"
         self._user_repository.create(User(username, password))
-        return True
+        return "success"

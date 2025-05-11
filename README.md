@@ -18,6 +18,8 @@ Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä t
 - [Työaikakirjanpito](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 - [Changelog](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+  
+- [Selvitys tekoälyn käytöstä](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/tekoalyselvitys.md)
 
 ## Asennus
 1. Asenna riippuvuudet: `poetry install`

@@ -28,3 +28,9 @@
 - Nyt käyttäjätunnuksen tulee olla uniikki ja vähintään 4 merkkiä pitkä
 - Nyt väärästä tunnuksesta (olemassa oleva tai liian lyhyt) tai väärästä salasanasta tulee virheviesti
 - Testaus: Muutama testi lisää repositoryyn ja aloitettu service-luokkiin testien kirjoittaminen
+
+## Viikko 7
+- Siistitty ja paranneltu käyttöliittymää
+- Korjattu bugeja ja lisätty virheviestejä
+- Jatkettu Docstringien parissa
+- Päivitetty sovelluksen dokumentaatiota, mm. käyttöohjetta

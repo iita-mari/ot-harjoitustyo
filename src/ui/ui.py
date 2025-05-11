@@ -68,7 +68,7 @@ class UI:
             if not existing_user:
                 print("----------------------------------------")
                 print("VIRHE! Käyttäjätunnusta ei ole olemassa.")
-                print("Palataan valikkoon...")
+                print("Palataan edelliseen valikkoon...")
                 print("----------------------------------------")
             else:
                 print("-----------------------------------------")
@@ -84,7 +84,7 @@ class UI:
                     self.user_login()
                 elif user_choice == "2":
                     print("---------------------")
-                    print("Palataan valikkoon...")
+                    print("Palataan edelliseen valikkoon...")
                     print("---------------------")
                     self.start()
                 else:

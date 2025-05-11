@@ -56,7 +56,7 @@ class AppView:
 
         print("")
         print("[1] Lisää piste")
-        print("[2] Palaa valikkoon")
+        print("[2] Palaa edelliseen valikkoon")
         choice = input("Valinta: ")
 
         if choice == "1":
@@ -70,7 +70,7 @@ class AppView:
         print("")
         row = int(input(f"Valitse kotityörivin numero (ensimmäinen rivi - viimeinen rivi):1 - {len(tasks)}): ")) - 1
         col = int(input("Valitse päivän numero (1-31): ")) - 1
-        mark = input("Syötä merkki (esim. oma etukirjain): ")
+        mark = input("Syötä nimimerkki (esim. oma etukirjain): ")
 
         grid = self.contest_service.add_point(self.user.username, row, col, mark)
         print("")
@@ -111,7 +111,7 @@ class AppView:
             print("[2] Lisää uusi kotityö")
             print("[3] Muokkaa olemassaolevaa kotityötä")
             print("[4] Poista olemassaoleva kotityö")
-            print("[x] Palaa valikkoon")
+            print("[x] Palaa edelliseen valikkoon")
             print("")
             user_choice = input("Valitse toiminto: ")
 
@@ -121,10 +121,10 @@ class AppView:
                     print(f"{i}. {task}")
                     print("")
                 if len(tasks) == 0:
-                    print("--------------------")
+                    print("--------------------------------")
                     print("VIRHE! Ei kotitöitä.")
-                    print("Palataan valikkoon...")
-                    print("--------------------")
+                    print("Palataan edelliseen valikkoon...")
+                    print("--------------------------------")
             elif user_choice == "2":
                 print("")
                 name = input("Kotityön nimi: ")
@@ -159,7 +159,7 @@ class AppView:
                 self.housework_service.delete_task(self.user.username, name)
                 print("")
             elif user_choice == "x":
-                self.main()
+                return
             else:
                 print("----------------------------")
                 print("VIRHE! Virheellinen valinta.")

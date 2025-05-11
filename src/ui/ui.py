@@ -1,5 +1,5 @@
 import os
-from repositories.user_repository import UserRepository, User
+from repositories.user_repository import UserRepository
 from ui.app_view import AppView
 from services.user_service import UserService
 
@@ -10,12 +10,21 @@ user_service = UserService(user_repository)
 
 
 class UI:
+    """Class for UI before login in.
+    """
+
     def __init__(self):
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
         print("Tervetuloa Kotityö-sovellukseen")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
 
     def start(self):
+        """First menu, where user can log in, make new user account or close the application
+
+        Args:
+            user_choice: user's choice
+        """
+
         while True:
             print("")
             print("~*~*~*~*~*~*~*~*~*~")
@@ -44,6 +53,13 @@ class UI:
                 print("---------------------------")
 
     def user_login(self):
+        """Login view. Menu, where user logs in to app
+
+        Args:
+            username: user's username, at least 4 characters
+            password: user's password, at least 4 characters
+        """
+
         print("")
         print("~*~*~*~*~*~*~*~*~")
         print("Kirjaudu sisään")
@@ -94,6 +110,14 @@ class UI:
 
 
     def new_user(self):
+        """Menu for making new user account
+
+        Args:
+            username: user's chosen username. At least 4 characters long
+            password: user's chosen password. At least 4 characters long
+            password2: first password again to check typos
+        """
+
         print("")
         print("~*~*~*~*~*~*~*~*~*~")
         print("Luo uusi käyttäjä")
@@ -144,6 +168,9 @@ class UI:
                 break
 
     def exit_login(self):
+        """Prints message about closing the app
+        """
+        
         print("")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
         print("Sovellus suljetaan. Kiitos ja näkemiin!")

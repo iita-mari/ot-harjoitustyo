@@ -5,6 +5,9 @@ from services.housework_service import HouseworkService
 from services.contest_service import ContestService
 
 class AppView:
+    """AppView is UI class for things happening after login.
+    """
+
     def __init__(self, user):
         self.user = user
         self.housework_repository = HouseworkRepository()
@@ -13,6 +16,12 @@ class AppView:
         self.contest_service = ContestService()
 
     def main(self):
+        """Prints main menu of the app and leads different functions of the app
+
+        Args:
+            user_choice: User's choice
+        """
+
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*")
         print(f"Tervetuloa ~*{self.user.username}*~, olet kirjautunut Kotityö-sovellukseen")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*")
@@ -39,6 +48,12 @@ class AppView:
                 print("Virheellinen valinta.")
 
     def contest(self):
+        """Prints Kotityö-competition -related things and asks which function user chooses
+
+        Args:
+            choice: User's choice
+        """
+
         print("")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
         print("Kotityö-kisa")
@@ -65,6 +80,15 @@ class AppView:
             self.main()
 
     def add_point(self):
+        """ Add point(')s to user's housework-grid and shows points of the competition
+
+        Args:
+            row: houseworks lissted
+            col: days form 1 to 31
+            mark: nickname or other identifier for points
+            grid: grid of the user's houseworks and points
+        """
+
         tasks, grid = self.contest_service.get_contest_data(self.user.username)
         self._print_contest_grid(grid, tasks)
         print("")
@@ -80,6 +104,13 @@ class AppView:
 
 
     def _print_contest_grid(self, grid, tasks):
+        """Prints housework contest-grid
+
+        Args:
+            grid: grid with points
+            tasks: housewoeks listed
+        """
+
         task_col_width = max(len(f"{i+1}. {task}") for i, task in enumerate(tasks)) + 2
         print(" " * task_col_width + " ".join(f"{i+1:2}" for i in range(31)))
         print(" " * task_col_width + "-" * (3 * 31))
@@ -98,6 +129,13 @@ class AppView:
 
 
     def housework(self):
+        """Menu, where user can list houseworks, add/edit/delete houseworks
+
+        Args:
+            user_choice: choice of user
+        """
+
+
         print("")
         print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~")
         print("Lisää/muokkaa/poista kotitöitä")

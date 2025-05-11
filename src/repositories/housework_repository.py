@@ -78,7 +78,7 @@ class HouseworkRepository:
 
         Args:
             username: Name of the user
-            old_name: Name of the old housework - the housework which name user want's to get changed
+            old_name: Name of the old housework, the housework which name user want's to get changed
             new_name: New name to the housework
         """
 

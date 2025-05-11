@@ -29,7 +29,8 @@ class TestHouseworkRepository(unittest.TestCase):
         tasks = self.housework.get_all(self.test_username)
         self.assertNotIn("imurointi", tasks)
 
-#    def test_update_updates_old_task_to_new_task(self):
-#        self.housework.update(self.test_username, "imurointi", "tiskaus")
-#        tasks = self.housework.get_all(self.test_username)
-#        self.assertIn("tiskaus", tasks)
+    def test_update_updates_old_task_to_new_task(self):
+        self.housework.add(self.test_username, "kiillotus")
+        self.housework.update(self.test_username, "kiillotus", "pölyt")
+        tasks = self.housework.get_all(self.test_username)
+        self.assertIn("pölyt", tasks)

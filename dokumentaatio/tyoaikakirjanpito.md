@@ -6,4 +6,5 @@
 | 8.4. | 10 | Käyttöliittymän eteenpäin vienti. Sovelluksen kirjautumisen jälkeisen näkymän (app_view:n) hahmottelu. Edellisen viikon virheiden korjaaminen. Kirjautumistietojen tallentaminen tiedostoon. User_repositorylle testien kokeileminen|
 | 15.4. | 7 | Kotityökisan taulukko, kotitöiden lisääminen/muokkaaminen/poistaminen. Testien kirjoittaminen viikon ohjeistuksen mukaisesti. Kisataulukko ja kotityöt tallennetaan tiedostoon.|
 | 29.4. | 5 | Salasanan ja käyttätunnuksen tarkistus. Service-luokkien lisääminen ja erottaminen ui:sta. Dockstringien aloittaminen. Muutama testi lisää. Käyttöohjeen ensimmäinen versio. Havaittu useampia bugeja, joiden korjaaminen seuraavaksi.|
-| Yht. | 28,5 |
+| 11.5. | 8 | Käyttöliittymän parantaminen. Sovelluksen dokumentaatio. |
+| Yht. | 36,5 |

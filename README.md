@@ -6,7 +6,7 @@ Sovelluksen avulla kotitalouden jäsenet voivat merkata listattuja kotitöitä t
 **HUOM!** Käytäthän vähintään Python-versiota 3.10 sovelluksen kanssa.
 
 ## Release
-- [Loppupalautus](https://github.com/iita-mari/ot-harjoitustyo/releases/tag/loppupalautus)
+- [Loppupalautus](https://github.com/iita-mari/ot-harjoitustyo/releases/tag/Loppupalautus)
 
 ## Dokumentaatio
 - [Käyttöohje](https://github.com/iita-mari/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
